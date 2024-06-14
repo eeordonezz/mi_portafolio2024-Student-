@@ -1,0 +1,426 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #6a0572, #4db6ac);
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffdd57;
+    transform: scale(1.1);
+}
+
+header .nombre {
+    font-size: 1.3em;
+    color: #fff;
+    animation: slideInRight 1s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Sección Sobre Mí */
+.sobre-mi {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.sobre-mi .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.sobre-mi .imagen-redonda img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-mi .descripcion {
+    max-width: 600px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.sobre-mi .descripcion h2 {
+    font-size: 2.5em;
+    color: #6a0572;
+    margin-bottom: 15px;
+}
+
+.sobre-mi .descripcion p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Primera Sección */
+.primera-seccion {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.primera-seccion .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.foto-grande img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fotos-pequenas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.fotos-pequenas img {
+    width: calc(12.5% - 10px); /* Ajuste para hacer las fotos más pequeñas */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.fotos-pequenas img:hover {
+    transform: scale(1.05);
+}
+
+/* Segunda Sección */
+/* Estilos para la sección de trabajos */
+.segunda-seccion {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Cambio de color de fondo */
+    text-align: center;
+    background-image: url('fondo-trabajos.jpg'); /* Agregar una imagen de fondo */
+    background-size: cover;
+}
+
+.segunda-seccion .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trabajos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Aumentar el espacio entre los trabajos */
+    justify-content: center;
+}
+
+.trabajo {
+    width: calc(33.333% - 40px); /* Ajustar el tamaño de los trabajos */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Agregar una animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para los botones */
+.boton {
+    text-decoration: none;
+    color: #fff;
+    background-color: #6a0572;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton:hover {
+    background-color: #4db6ac;
+    transform: scale(1.05);
+}
+
+/* Estilos para las imágenes de los trabajos */
+.trabajo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.trabajo:hover img {
+    transform: scale(1.1); /* Aumentar el tamaño de la imagen al pasar el mouse sobre el trabajo */
+}
+
+
+.boton {
+    text-decoration: none;
+    color: #fff;
+    background-color: #6a0572;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton:hover {
+    background-color: #4db6ac;
+    transform: scale(1.05);
+}
+
+.trabajo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.trabajo img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trabajo p {
+    font-size: 1.1em;
+    color: #555;
+    padding: 20px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.boton {
+    text-decoration: none;
+    color: #fff;
+    background-color: #6a0572;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton:hover {
+    background-color: #4db6ac;
+    transform: scale(1.05);
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .contenedor-header {
+        padding: 0 20px;
+    }
+    
+    header .logo {
+        font-size: 1.5em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .nombre {
+        display: none;
+    }
+
+    .sobre-mi .contenedor {
+        flex-direction: column;
+    }
+
+    .sobre-mi .imagen-redonda img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sobre-mi .descripcion {
+        text-align: center;
+    }
+
+    .sobre-mi .descripcion h2 {
+        font-size: 2em;
+    }
+
+    .sobre-mi .descripcion p {
+        font-size: 1em;
+    }
+
+    .primera-seccion .contenedor {
+        padding: 0 10px;
+    }
+
+    .foto-grande img {
+        max-width: 100%;
+    }
+
+    .fotos-pequenas img {
+        width: calc(33.333% - 10px);
+    }
+
+    .segunda-seccion .contenedor {
+        padding: 0 10px;
+    }
+
+    .trabajos {
+        gap: 20px;
+    }
+
+    .trabajo {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilos para el header en dispositivos móviles */
+    header {
+        padding: 15px 0;
+    }
+
+    .contenedor-header {
+        padding: 0 15px;
+    }
+
+    header .logo {
+        font-size: 1.5em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .nombre {
+        display: block;
+    }
+
+    /* Estilos para la sección Sobre Mí en dispositivos móviles */
+    .sobre-mi .descripcion {
+        text-align: center;
+    }
+
+    /* Estilos para los botones en dispositivos móviles */
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .boton {
+        margin-bottom: 10px;
+    }
+
+    /* Estilos para las imágenes en dispositivos móviles */
+    .foto-grande img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .fotos-pequenas img {
+        width: calc(25% - 10px);
+    }
+
+    /* Estilos para la sección de trabajos en dispositivos móviles */
+    .trabajo {
+        width: calc(50% - 20px);
+    }
+}
+
+
+
+
+
+
+
+
+
